@@ -12,8 +12,8 @@ public class NameGenerator {
         this.storage = storage;
     }
 
-    public String generateName(UUID uuid) {
-        int index = storage.countCoords(uuid) + 1;
+    public String generateName(UUID uuid, int startingIndex) {
+        int index = startingIndex;
         String base;
         do {
             base = "coord_" + index;
