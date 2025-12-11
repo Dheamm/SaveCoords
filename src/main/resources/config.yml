@@ -1,0 +1,22 @@
+# Default coordinate limit per player.
+# -1 = unlimited
+max-coords-default: 10
+
+# Limit by permission.
+# If the player has multiple, the highest value is used.
+# -1 = unlimited
+max-coords-permission:
+  savecoords.vip: 25
+  savecoords.super: 50
+  savecoords.ultra: -1
+
+database:
+  # sqlite / mysql
+  type: sqlite
+
+  mysql:
+    host: localhost
+    port: 3306
+    database: savecoords
+    user: root
+    password: ""

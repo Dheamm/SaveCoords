@@ -1,0 +1,30 @@
+# Available placeholders:
+# %player%  - player name
+# %name%    - coordinate name
+# %x% %y% %z% - coordinates
+# %world%   - world
+# %limit%   - coords limit
+# %used%    - currently used coords
+# %remaining% - remaining coords
+
+saved: "&aYou have saved &e%name% &aat &e%x% %y% %z% &a(&e%world%&a)."
+error_saving: "&cAn error occurred while saving your coordinates."
+limit_reached: "&cYou have reached your limit of &e%limit% &ccoordinates. (&e%used%&c used, &e%remaining%&c remaining)"
+
+deleted: "&aDeleted coordinate &e%name%&a."
+not_found: "&cThat coordinate does not exist."
+
+list_header: "&eYour saved coordinates:"
+list_format: "&7- &a%name% &7(&e%x% %y% %z% &7- &e%world%&7)"
+list_empty: "&cYou have no saved coordinates."
+
+get_format: "&a%name% &7-> &e%x% %y% %z% &7(&e%world%&7)"
+
+reload_ok: "&aSaveCoords successfully reloaded."
+
+no_permission: "&cYou don't have permission to do that."
+only_players: "&cOnly players can use this command."
+unknown_subcommand: "&cUnknown subcommand. Use &e/coords&c."
+usage_main: "&eUsage: /coords <save|get|list|delete|reload>"
+usage_get: "&eUsage: /coords get <name>"
+usage_delete: "&eUsage: /coords delete <name>"

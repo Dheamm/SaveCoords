@@ -1,0 +1,35 @@
+name: CoordsSave
+version: '1.0-SNAPSHOT'
+main: com.dheam.coordsSave.Main
+api-version: '1.21'
+folia-supported: true
+authors: [ Dheam ]
+description: Stores player coordinates with a configurable limit and SQLite/MySQL database support.
+
+commands:
+  coords:
+    description: Manage your saved coordinates.
+    usage: "/coords <save|get|list|delete|reload>"
+    aliases: [sc, savecoords]
+    permission: savecoords.use
+
+permissions:
+  savecoords.use:
+    description: Allows using /coords (save, get, list, delete).
+    default: true
+
+  savecoords.reload:
+    description: Allows using /coords reload.
+    default: op
+
+  savecoords.vip:
+    description: VIP coordinate limit (configurable).
+    default: false
+
+  savecoords.super:
+    description: SUPER coordinate limit (configurable).
+    default: false
+
+  savecoords.ultra:
+    description: ULTRA coordinate limit (configurable).
+    default: false
