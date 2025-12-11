@@ -103,7 +103,6 @@ public class SaveSubcommand implements CoordsCommand.Subcommand {
 
             String name = finalManualName;
             if (name == null || name.trim().isEmpty()) {
-                // reuse "used" to avoid another count query in the generator
                 name = nameGenerator.generateName(uuid, used + 1);
             }
 
@@ -111,10 +110,14 @@ public class SaveSubcommand implements CoordsCommand.Subcommand {
             SavedCoord coord = new SavedCoord(uuid, name, finalWorld, finalX, finalY, finalZ, now);
 
             boolean success = storage.saveCoord(coord);
+
             int newUsed = success ? used + 1 : used;
             int remaining = (finalLimit == -1) ? -1 : Math.max(0, finalLimit - newUsed);
 
-            // integers for display
+            if (success) {
+                plugin.addCoordNameToCache(uuid, name);
+            }
+
             String xText = String.valueOf((int) Math.round(finalX));
             String yText = String.valueOf((int) Math.round(finalY));
             String zText = String.valueOf((int) Math.round(finalZ));

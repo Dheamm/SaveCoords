@@ -59,9 +59,7 @@ public class TabCompleterHandler implements TabCompleter {
 
         if (sub.equals("get") || sub.equals("delete")) {
             if (args.length == 2) {
-                storage.getCoords(player.getUniqueId()).forEach(coord ->
-                        result.add(coord.getName())
-                );
+                result.addAll(plugin.getCachedCoordNames(player.getUniqueId()));
             }
         }
 

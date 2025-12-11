@@ -36,6 +36,14 @@ public class ListSubcommand implements CoordsCommand.Subcommand {
         scheduler.async().runNow(() -> {
             List<SavedCoord> coords = storage.getCoords(uuid);
 
+            {
+                List<String> names = new java.util.ArrayList<>();
+                for (SavedCoord coord : coords) {
+                    names.add(coord.getName());
+                }
+                plugin.setCachedCoordNames(uuid, names);
+            }
+
             if (coords.isEmpty()) {
                 scheduler.entity(player).run(() ->
                         messages.send(player, "list_empty", null)

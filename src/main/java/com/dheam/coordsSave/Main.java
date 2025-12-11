@@ -1,5 +1,7 @@
 package com.dheam.coordsSave;
 
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import com.cjcrafter.foliascheduler.FoliaCompatibility;
 import com.cjcrafter.foliascheduler.ServerImplementation;
 import com.dheam.coordsSave.commands.CoordsCommand;
@@ -21,6 +23,7 @@ public class Main extends JavaPlugin {
     private CoordStorage coordStorage;
     private NameGenerator nameGenerator;
     private ServerImplementation scheduler;
+    private final Map<UUID, List<String>> coordNameCache = new ConcurrentHashMap<>();
 
     @Override
     public void onEnable() {
@@ -39,7 +42,7 @@ public class Main extends JavaPlugin {
 
         registerCommands();
 
-        getLogger().info("SaveCoords habilitado.");
+        getLogger().info("SaveCoords enabled.");
     }
 
     @Override
@@ -52,13 +55,13 @@ public class Main extends JavaPlugin {
             scheduler.cancelTasks();
         }
 
-        getLogger().info("SaveCoords deshabilitado.");
+        getLogger().info("SaveCoords disabled.");
     }
 
     private void registerCommands() {
         var coordsCmd = getCommand("coords");
         if (coordsCmd == null) {
-            getLogger().severe("No se pudo registrar el comando /coords. Revisa plugin.yml");
+            getLogger().severe("The /coords command could not be registered.");
             return;
         }
 
@@ -94,4 +97,41 @@ public class Main extends JavaPlugin {
     public ServerImplementation getScheduler() {
         return scheduler;
     }
+
+    // Caché:
+    public List<String> getCachedCoordNames(UUID uuid) {
+        return coordNameCache.getOrDefault(uuid, Collections.emptyList());
+    }
+
+    public void setCachedCoordNames(UUID uuid, List<String> names) {
+        coordNameCache.put(uuid, new ArrayList<>(names));
+    }
+
+    public void addCoordNameToCache(UUID uuid, String name) {
+        coordNameCache.compute(uuid, (id, list) -> {
+            if (list == null) {
+                list = new ArrayList<>();
+            }
+            if (!list.contains(name)) {
+                list.add(name);
+            }
+            return list;
+        });
+    }
+
+    public void removeCoordNameFromCache(UUID uuid, String name) {
+        coordNameCache.computeIfPresent(uuid, (id, list) -> {
+            list.remove(name);
+            if (list.isEmpty()) {
+                return null;
+            }
+            return list;
+        });
+    }
+
+    public void clearCoordNameCache() {
+        coordNameCache.clear();
+    }
+
 }
+

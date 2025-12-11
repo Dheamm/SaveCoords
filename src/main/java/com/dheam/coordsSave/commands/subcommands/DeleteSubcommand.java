@@ -47,6 +47,8 @@ public class DeleteSubcommand implements CoordsCommand.Subcommand {
                 return;
             }
 
+            plugin.removeCoordNameFromCache(uuid, name);
+
             Map<String, String> placeholders = new HashMap<>();
             placeholders.put("%name%", name);
 
