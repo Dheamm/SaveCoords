@@ -1,6 +1,6 @@
-package com.dheam.coordsSave.config;
+package com.dheam.saveCoords.config;
 
-import com.dheam.coordsSave.Main;
+import com.dheam.saveCoords.Main;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 

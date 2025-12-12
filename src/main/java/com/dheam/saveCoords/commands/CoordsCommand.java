@@ -1,15 +1,15 @@
-package com.dheam.coordsSave.commands;
+package com.dheam.saveCoords.commands;
 
-import com.dheam.coordsSave.Main;
-import com.dheam.coordsSave.commands.subcommands.DeleteSubcommand;
-import com.dheam.coordsSave.commands.subcommands.GetSubcommand;
-import com.dheam.coordsSave.commands.subcommands.ListSubcommand;
-import com.dheam.coordsSave.commands.subcommands.ReloadSubcommand;
-import com.dheam.coordsSave.commands.subcommands.SaveSubcommand;
-import com.dheam.coordsSave.config.ConfigManager;
-import com.dheam.coordsSave.config.Messages;
-import com.dheam.coordsSave.data.CoordStorage;
-import com.dheam.coordsSave.utils.NameGenerator;
+import com.dheam.saveCoords.Main;
+import com.dheam.saveCoords.commands.subcommands.DeleteSubcommand;
+import com.dheam.saveCoords.commands.subcommands.GetSubcommand;
+import com.dheam.saveCoords.commands.subcommands.ListSubcommand;
+import com.dheam.saveCoords.commands.subcommands.ReloadSubcommand;
+import com.dheam.saveCoords.commands.subcommands.SaveSubcommand;
+import com.dheam.saveCoords.config.ConfigManager;
+import com.dheam.saveCoords.config.Messages;
+import com.dheam.saveCoords.data.CoordStorage;
+import com.dheam.saveCoords.utils.NameGenerator;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

@@ -17,6 +17,7 @@ not_found: "&cThat coordinate does not exist."
 list_header: "&eYour saved coordinates:"
 list_format: "&7- &a%name% &7(&e%x% %y% %z% &7- &e%world%&7)"
 list_empty: "&cYou have no saved coordinates."
+hover_copy: "&6Click to copy"
 
 get_format: "&a%name% &7-> &e%x% %y% %z% &7(&e%world%&7)"
 
@@ -28,3 +29,8 @@ unknown_subcommand: "&cUnknown subcommand. Use &e/coords&c."
 usage_main: "&eUsage: /coords <save|get|list|delete|reload>"
 usage_get: "&eUsage: /coords get <name>"
 usage_delete: "&eUsage: /coords delete <name>"
+
+list_header_other: "&eSaved coordinates of &a%player%&e:"
+list_empty_other: "&cPlayer &e%player% &chas no saved coordinates."
+player_not_found: "&cPlayer &e%player% &cwas not found."
+

@@ -1,9 +1,9 @@
-package com.dheam.coordsSave.commands.subcommands;
+package com.dheam.saveCoords.commands.subcommands;
 
-import com.dheam.coordsSave.Main;
-import com.dheam.coordsSave.commands.CoordsCommand;
-import com.dheam.coordsSave.config.ConfigManager;
-import com.dheam.coordsSave.config.Messages;
+import com.dheam.saveCoords.Main;
+import com.dheam.saveCoords.commands.CoordsCommand;
+import com.dheam.saveCoords.config.ConfigManager;
+import com.dheam.saveCoords.config.Messages;
 import org.bukkit.command.CommandSender;
 
 public class ReloadSubcommand implements CoordsCommand.Subcommand {

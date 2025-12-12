@@ -1,6 +1,6 @@
-package com.dheam.coordsSave.utils;
+package com.dheam.saveCoords.utils;
 
-import com.dheam.coordsSave.data.CoordStorage;
+import com.dheam.saveCoords.data.CoordStorage;
 
 import java.util.UUID;
 

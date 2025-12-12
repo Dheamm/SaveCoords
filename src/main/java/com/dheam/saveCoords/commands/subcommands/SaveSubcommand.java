@@ -1,14 +1,14 @@
-package com.dheam.coordsSave.commands.subcommands;
+package com.dheam.saveCoords.commands.subcommands;
 
 import com.cjcrafter.foliascheduler.ServerImplementation;
-import com.dheam.coordsSave.Main;
-import com.dheam.coordsSave.commands.CoordsCommand;
-import com.dheam.coordsSave.config.ConfigManager;
-import com.dheam.coordsSave.config.Messages;
-import com.dheam.coordsSave.data.CoordStorage;
-import com.dheam.coordsSave.model.SavedCoord;
-import com.dheam.coordsSave.utils.NameGenerator;
-import com.dheam.coordsSave.utils.PermissionUtil;
+import com.dheam.saveCoords.Main;
+import com.dheam.saveCoords.commands.CoordsCommand;
+import com.dheam.saveCoords.config.ConfigManager;
+import com.dheam.saveCoords.config.Messages;
+import com.dheam.saveCoords.data.CoordStorage;
+import com.dheam.saveCoords.model.SavedCoord;
+import com.dheam.saveCoords.utils.NameGenerator;
+import com.dheam.saveCoords.utils.PermissionUtil;
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;

@@ -1,6 +1,6 @@
-name: CoordsSave
+name: SaveCoords
 version: '1.0-SNAPSHOT'
-main: com.dheam.coordsSave.Main
+main: com.dheam.saveCoords.Main
 api-version: '1.21'
 folia-supported: true
 authors: [ Dheam ]
@@ -17,6 +17,11 @@ permissions:
   savecoords.use:
     description: Allows using /coords (save, get, list, delete).
     default: true
+
+  savecoords.view.others:
+    description: Allows listing coordinates of other players with /coords list <player>.
+    default: op
+
 
   savecoords.reload:
     description: Allows using /coords reload.

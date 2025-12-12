@@ -1,6 +1,6 @@
-package com.dheam.coordsSave.config;
+package com.dheam.saveCoords.config;
 
-import com.dheam.coordsSave.Main;
+import com.dheam.saveCoords.Main;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ClickEvent;
@@ -127,9 +127,10 @@ public class Messages {
                 coordsText
         ));
 
+        String hoverText = get("hover_copy", null);
         coordsComp.setHoverEvent(new HoverEvent(
                 HoverEvent.Action.SHOW_TEXT,
-                new ComponentBuilder(ChatColor.GOLD + "Click para copiar coords").create()
+                new ComponentBuilder(hoverText).create()
         ));
 
         base.addExtra(coordsComp);

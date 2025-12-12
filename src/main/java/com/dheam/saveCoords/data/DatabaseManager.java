@@ -1,7 +1,7 @@
-package com.dheam.coordsSave.data;
+package com.dheam.saveCoords.data;
 
-import com.dheam.coordsSave.Main;
-import com.dheam.coordsSave.config.ConfigManager;
+import com.dheam.saveCoords.Main;
+import com.dheam.saveCoords.config.ConfigManager;
 
 import java.sql.Connection;
 import java.sql.SQLException;

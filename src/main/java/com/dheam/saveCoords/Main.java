@@ -1,16 +1,16 @@
-package com.dheam.coordsSave;
+package com.dheam.saveCoords;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import com.cjcrafter.foliascheduler.FoliaCompatibility;
 import com.cjcrafter.foliascheduler.ServerImplementation;
-import com.dheam.coordsSave.commands.CoordsCommand;
-import com.dheam.coordsSave.commands.TabCompleterHandler;
-import com.dheam.coordsSave.config.ConfigManager;
-import com.dheam.coordsSave.config.Messages;
-import com.dheam.coordsSave.data.CoordStorage;
-import com.dheam.coordsSave.data.DatabaseManager;
-import com.dheam.coordsSave.utils.NameGenerator;
+import com.dheam.saveCoords.commands.CoordsCommand;
+import com.dheam.saveCoords.commands.TabCompleterHandler;
+import com.dheam.saveCoords.config.ConfigManager;
+import com.dheam.saveCoords.config.Messages;
+import com.dheam.saveCoords.data.CoordStorage;
+import com.dheam.saveCoords.data.DatabaseManager;
+import com.dheam.saveCoords.utils.NameGenerator;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {

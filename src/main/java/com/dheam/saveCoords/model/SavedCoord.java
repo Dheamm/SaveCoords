@@ -1,4 +1,4 @@
-package com.dheam.coordsSave.model;
+package com.dheam.saveCoords.model;
 
 import java.util.UUID;
 

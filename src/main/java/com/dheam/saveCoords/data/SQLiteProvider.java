@@ -1,6 +1,6 @@
-package com.dheam.coordsSave.data;
+package com.dheam.saveCoords.data;
 
-import com.dheam.coordsSave.Main;
+import com.dheam.saveCoords.Main;
 
 import java.io.File;
 import java.sql.Connection;

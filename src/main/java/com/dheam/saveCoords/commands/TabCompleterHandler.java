@@ -1,8 +1,7 @@
-package com.dheam.coordsSave.commands;
+package com.dheam.saveCoords.commands;
 
-import com.dheam.coordsSave.Main;
-import com.dheam.coordsSave.data.CoordStorage;
-import com.dheam.coordsSave.model.SavedCoord;
+import com.dheam.saveCoords.Main;
+import com.dheam.saveCoords.data.CoordStorage;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.TabCompleter;
@@ -53,6 +52,19 @@ public class TabCompleterHandler implements TabCompleter {
                 result.add(String.valueOf(loc.getBlockY()));
             } else if (args.length == 4) {
                 result.add(String.valueOf(loc.getBlockZ()));
+            }
+            return result;
+        }
+
+        if (sub.equals("list")) {
+            if (args.length == 2 && player.hasPermission("savecoords.view.others")) {
+                String prefix = args[1].toLowerCase(Locale.ROOT);
+                plugin.getServer().getOnlinePlayers().forEach(online -> {
+                    String name = online.getName();
+                    if (name.toLowerCase(Locale.ROOT).startsWith(prefix)) {
+                        result.add(name);
+                    }
+                });
             }
             return result;
         }

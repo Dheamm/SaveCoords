@@ -1,6 +1,6 @@
-package com.dheam.coordsSave.utils;
+package com.dheam.saveCoords.utils;
 
-import com.dheam.coordsSave.config.ConfigManager;
+import com.dheam.saveCoords.config.ConfigManager;
 import org.bukkit.entity.Player;
 
 import java.util.Map;

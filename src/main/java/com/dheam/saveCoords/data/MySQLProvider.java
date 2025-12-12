@@ -1,4 +1,4 @@
-package com.dheam.coordsSave.data;
+package com.dheam.saveCoords.data;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

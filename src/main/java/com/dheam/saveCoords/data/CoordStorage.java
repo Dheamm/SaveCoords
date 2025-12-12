@@ -1,6 +1,6 @@
-package com.dheam.coordsSave.data;
+package com.dheam.saveCoords.data;
 
-import com.dheam.coordsSave.model.SavedCoord;
+import com.dheam.saveCoords.model.SavedCoord;
 
 import java.sql.*;
 import java.util.ArrayList;
